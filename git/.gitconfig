@@ -1,0 +1,25 @@
+[user]
+	name = Dan Belling
+	email = danhbelling@gmail.com
+[alias]
+  s = status -s
+  co = checkout
+  go = checkout -B
+  remotes = remote -v
+  put = push origin HEAD
+  done = commit -a -m
+  undo = reset --hard
+  ignored = ls-files --others -i --exclude-standard
+[color]
+	ui = auto
+[color "status"]
+  added = green
+  changed = red
+  untracked = cyan
+[core]
+	editor = atom
+	excludesfile = ~/.gitignore_global
+[github]
+  user = danhbelling@gmail.com
+[push]
+	default = simple
