@@ -69,9 +69,6 @@ sexy_bash_prompt_unpushed_unpulled_symbol="⬡"
 sexy_bash_prompt_dirty_unpushed_unpulled_symbol="⬢"
 
 # Apply symbol overrides that have been set in the environment
-# DEV: Working unicode symbols can be determined via the following gist
-#   **WARNING: The following gist has 64k lines and may freeze your browser**
-#   https://gist.github.com/twolfson/9cc7968eb6ee8b9ad877
 if [[ -n "$PROMPT_SYNCED_SYMBOL" ]]; then sexy_bash_prompt_synced_symbol="$PROMPT_SYNCED_SYMBOL"; fi
 if [[ -n "$PROMPT_DIRTY_SYNCED_SYMBOL" ]]; then sexy_bash_prompt_dirty_synced_symbol="$PROMPT_DIRTY_SYNCED_SYMBOL"; fi
 if [[ -n "$PROMPT_UNPUSHED_SYMBOL" ]]; then sexy_bash_prompt_unpushed_symbol="$PROMPT_UNPUSHED_SYMBOL"; fi
@@ -94,7 +91,6 @@ function sexy_bash_prompt_get_git_branch() {
 
 function sexy_bash_prompt_get_git_progress() {
   # Detect in-progress actions (e.g. merge, rebase)
-  # https://github.com/git/git/blob/v1.9-rc2/wt-status.c#L1199-L1241
   git_dir="$(git rev-parse --git-dir)"
 
   # git merge
