@@ -5,6 +5,7 @@
   s = status -s
   co = checkout
   go = checkout -B
+	l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset %C(cyan)(%an)%Creset' --date=relative
   remotes = remote -v
   put = push origin HEAD
   done = commit -a -m
