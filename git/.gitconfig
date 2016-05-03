@@ -7,6 +7,7 @@
   go = checkout -B
 	l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset %C(cyan)(%an)%Creset' --date=relative
   remotes = remote -v
+	pr = "!_git_pr() { git fetch origin pull/$1/head:pr-$1 && git checkout pr-$1; }; _git_pr"
   put = push origin HEAD
   done = commit -a -m
   undo = reset --hard
@@ -24,3 +25,5 @@
   user = danhbelling@gmail.com
 [push]
 	default = simple
+[credential]
+	helper = osxkeychain

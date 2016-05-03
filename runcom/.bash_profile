@@ -18,3 +18,11 @@ fi
 for DOTFILE in "$DOTFILES_DIR"/system/.{function,function_*,path,env,alias,completion,grep,prompt,nvm,rvm,custom}; do
     [ -f "$DOTFILE" ] && . "$DOTFILE"
 done
+
+# Setting PATH for Python 3.5
+# The orginal version is saved in .bash_profile.pysave
+PATH="/Library/Frameworks/Python.framework/Versions/3.5/bin:${PATH}"
+export PATH
+
+# added by Anaconda3 4.0.0 installer
+export PATH="//anaconda/bin:$PATH"
