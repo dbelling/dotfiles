@@ -3,6 +3,13 @@
 alias _="sudo"
 alias g="git"
 alias rr="rm -rf"
+alias vi="vim"
+alias bim="vim" # Typos :(
+alias mkdir="mkdir -p"
+
+# PATH
+
+alias path='echo $PATH | tr -s ":" "\n"'
 
 # ls
 
@@ -16,6 +23,10 @@ alias lt="ls -lhAtr $LS_COLORS $LS_TIMESTYLEISO $LS_GROUPDIRSFIRST"
 alias ld="ls -ld $LS_COLORS */"
 
 unset LS_COLORS LS_TIMESTYLEISO LS_GROUPDIRSFIRST
+
+# bundler
+
+alias b="bundle"
 
 # cd
 
