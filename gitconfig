@@ -19,8 +19,8 @@
   changed = red
   untracked = cyan
 [core]
-	editor = atom
-	excludesfile = ~/.gitignore_global
+	editor = vim
+	excludesfile = ~/.gitignore
 [github]
   user = danhbelling@gmail.com
 [push]

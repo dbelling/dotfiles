@@ -1,18 +1,14 @@
-DOTFILES_DIR="/Users/$USER/dotfiles"
-export DOTFILES_DIR
+#!/bin/bash
+#########################
+# Creates symlinks from the home directory to dotfiles found in ~/dotfiles
+#########################
 
-# Update dotfiles
-# [ -d "$DOTFILES_DIR/.git" ] && git --work-tree="$DOTFILES_DIR" --git-dir="$DOTFILES_DIR/.git" pull origin master
+########## Variables
 
-# Symlinks for global dotfiles
-ln -sfv "$DOTFILES_DIR/runcom/.bash_profile" ~
-ln -sfv "$DOTFILES_DIR/runcom/.inputrc" ~
-ln -sfv "$DOTFILES_DIR/runcom/.gemrc" ~
-ln -sfv "$DOTFILES_DIR/git/.gitconfig" ~
-ln -sfv "$DOTFILES_DIR/git/.gitignore_global" ~
+dir=~/dotfiles		    # dotfiles directory
+files="alias gemrc gitconfig gitignore hushlogin psqlrc vimrc zshrc"
 
-# Package managers
-. "$DOTFILES_DIR/install/brew.sh"
-. "$DOTFILES_DIR/install/brew-cask.sh"
-. "$DOTFILES_DIR/install/npm.sh"
-. "$DOTFILES_DIR/install/pip.sh"
+# symlink dotfiles to home directory
+for file in $files; do
+    ln -sf $dir/$file ~/.$file
+done
