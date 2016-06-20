@@ -6,7 +6,7 @@
 ########## Variables
 
 dir=~/dotfiles		    # dotfiles directory
-files="alias gemrc gitconfig gitignore hushlogin psqlrc vimrc zshrc"
+files="alias gemrc gitconfig gitignore hushlogin irbrc psqlrc vimrc zshrc"
 
 # symlink dotfiles to home directory
 for file in $files; do
