@@ -82,5 +82,7 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"export PATH="$HOME/.rbenv/bin:$PATH"
+export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
+export PATH="$HOME/.rbenv/bin:$PATH"
+export PATH="//anaconda/bin:$PATH"
 eval "$(rbenv init - --no-rehash)"

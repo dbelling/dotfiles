@@ -6,6 +6,7 @@ set backspace=indent,eol,start
 set autoindent
 set number
 set history=50
+set tabstop=2
 set noswapfile
 set ruler
 set showcmd
