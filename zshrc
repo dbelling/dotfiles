@@ -82,6 +82,45 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+alias _="sudo"
+alias g="git"
+alias rr="rm -rf"
+alias vi="vim"
+alias bim="vim" # Typos :(
+alias mkdir="mkdir -p"
+
+# PATH
+
+alias path='echo $PATH | tr -s ":" "\n"'
+
+# ls
+
+alias l='ls'
+alias ll='ls -al'
+
+# bundler
+
+alias b="bundle"
+
+# cd
+
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias -- -="cd -"                  # Go to previous dir with -
+alias cd.='cd $(readlink -f .)'    # Go to real dir (i.e. if current dir is linked)
+
+# npm
+
+alias ni="npm install"
+alias nun="npm uninstall"
+alias nup="npm update"
+
+# python - use interactive python for shell
+
+alias python="ipython"
+
 export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
 export PATH="$HOME/.rbenv/bin:$PATH"
 export PATH="//anaconda/bin:$PATH"

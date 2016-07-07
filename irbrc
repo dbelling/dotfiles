@@ -15,7 +15,14 @@ rescue LoadError => err
   #warn "No Hirb: #{err}"
 end
 
-IRB.conf[:PROMPT_MODE] = :SIMPLE
+IRB.conf[:PROMPT][:CUSTOM] = {
+  :AUTO_INDENT => true ,
+  :PROMPT_I => '>> ',
+  :PROMPT_S => '%l>> ',
+  :PROMPT_C => '.. ',
+  :RETURN => "=>%s\n"
+}
+IRB.conf[:PROMPT_MODE] = :CUSTOM
 
 class Object
   def interesting_methods
