@@ -114,6 +114,8 @@ alias ll='ls -al'
 # bundler
 
 alias b="bundle"
+alias bx="bundle exec"
+alias bxrs="bundle exec rake spec"
 
 # cd
 
@@ -129,11 +131,10 @@ alias ni="npm install"
 alias nun="npm uninstall"
 alias nup="npm update"
 
-# python - use interactive python for shell
-
-alias python="ipython"
+# PATH env vars
 
 export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
 export PATH="$HOME/.rbenv/bin:$PATH"
 export PATH="//anaconda/bin:$PATH"
+export PATH="$HOME/catalyze:$PATH"
 eval "$(rbenv init - --no-rehash)"
