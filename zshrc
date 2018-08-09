@@ -131,6 +131,11 @@ alias ni="npm install"
 alias nun="npm uninstall"
 alias nup="npm update"
 
+# docker
+alias dku="docker-compose up -d"
+alias dks="docker-compose stop"
+alias dkb="docker build ."
+
 # PATH env vars
 
 export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
