@@ -136,10 +136,7 @@ alias dku="docker-compose up -d"
 alias dks="docker-compose stop"
 alias dkb="docker build ."
 
-# PATH env vars
-
-export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
-export PATH="$HOME/.rbenv/bin:$PATH"
-export PATH="//anaconda/bin:$PATH"
-export PATH="$HOME/catalyze:$PATH"
-eval "$(rbenv init - --no-rehash)"
+# kubernetes
+alias kubesetportname="export POD_NAME=$(kubectl get pods -o go-template --template '{{range .items}}{{.metadata.name}}{{"\n"}}{{end}}')"
+alias kubesetportvalue="export NODE_PORT=$(kubectl get services/kubernetes-service-name -o go-template='{{(index .spec.ports 0).nodePort}}')"
+alias kubepodlist="kubectl get pods -o wide"
